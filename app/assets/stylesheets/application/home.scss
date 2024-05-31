@@ -1,0 +1,46 @@
+#home{
+  padding: 1rem 2rem;
+  h1{
+    text-align: center;
+    font-size: 3rem;
+    color: #f8f8f8;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 800px){
+      font-size: 1.3rem;
+    }
+  }
+
+  .apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem; /* Adjust the gap value as needed */
+
+    @media (max-width: 800px) {
+      justify-content: center;
+    }
+
+    img {
+      width: calc(33.33% - 2rem); /* Subtracting part of the gap value to maintain alignment */
+      object-fit: cover;
+      border-radius: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: filter 0.3s;
+      pointer-events: none;
+
+      &:hover{
+        filter: grayscale(100%);
+      }
+
+      @media (max-width: 800px) {
+        border-radius: 1rem;
+      }
+    }
+
+    @media (max-width: 800px) {
+      img {
+        width: calc(100% - 3rem); /* Subtracting the full gap value to maintain alignment */
+      }
+    }
+  }
+}

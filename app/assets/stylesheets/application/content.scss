@@ -1,0 +1,42 @@
+/* Define the keyframes for the background color transition */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #6c6c6c; /* Light gray */
+  }
+  25% {
+    background-color: #142b4e; /* Medium light gray */
+  }
+  50% {
+    background-color: #37051a; /* Medium gray */
+  }
+  75% {
+    background-color: #500042; /* Medium dark gray */
+  }
+  100% {
+    background-color: #989300; /* Dark gray */
+  }
+}
+
+/* Apply the animation to the body */
+body {
+  background-color: #F1F7FE; /* Initial background color */
+  color: $text;
+  animation: backgroundAnimation 150s infinite alternate;
+  transition: background-color 1s ease;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#sections{
+  background-color: $container-color;
+  margin: 6rem 4rem 2rem 4rem;
+  padding-bottom: 3rem;
+  border-bottom-left-radius: 4rem;
+  border-top-left-radius: 2rem;
+
+  @media screen and (max-width: 800px){
+    margin: 1rem 0.3rem 0.3rem 0.3rem;
+    padding-bottom: 1rem;
+    border-radius: 0.3rem;
+  }
+}
