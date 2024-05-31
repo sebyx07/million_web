@@ -35,3 +35,5 @@ end
 group :development do
   gem 'rubocop-rails_config', '~> 1.16'
 end
+
+gem 'cssbundling-rails', '~> 1.4'
